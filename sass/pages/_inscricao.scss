@@ -1,0 +1,245 @@
+
+// hero
+.secao{
+
+    &--hero{
+        background-image: url(https://assets-global.website-files.com/61b9e0dd381626819c8d4f83/64957938a8a62d8071397ed5_pgc-python-bg1.webp);
+        background-size: cover;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        padding-bottom: 0;
+        overflow: hidden;
+
+
+        @include respond(small){
+            background-image: url(https://assets-global.website-files.com/61b9e0dd381626819c8d4f83/6495797b607323070bcf5e17_pgc-python-bg1-mobile.webp);
+        }
+    }
+    
+    &--disclaimer{
+        padding: 3.12rem 2rem;
+        background-color: $cinza;
+box-shadow: 0 0.5rem 1rem -0.2rem rgba(black, 0.6);
+    }
+
+
+    &--quem{
+        background-image: url(https://assets-global.website-files.com/61b9e0dd381626819c8d4f83/62cefb1ecf7f4662905b5b1e_%5BBACKGROUND%5D%20-%20BANNER%2005%20-%20desktop.webp);
+        background-position-x: 50%;
+        background-size: cover;
+        padding-top:21rem;
+        margin-top: -10rem;
+        background-position-y: 100%;
+        background-repeat: no-repeat;
+        padding-bottom: 0;
+
+        @include respond(small){
+            padding-top:14rem;
+            margin-top: -6rem;
+
+            background-image: url(https://assets-global.website-files.com/61b9e0dd381626819c8d4f83/62cefd163d834a0c0b773480_%5BBACKGROUND%5D%20-%20BANNER%2005%20-%20mobile.webp);
+        }
+
+        @include respond(tiny){
+            padding-top:12rem;
+            margin-top: -5rem;
+    }
+}
+}
+
+.container{
+
+    &--hero{
+        align-items: end;
+        position: relative;
+        width: 100%;
+
+        @include respond(small){
+            flex-flow:column;
+            align-items: center;
+            gap:3.12rem ;
+
+        }
+    }
+
+    &--passo, &--aprender{
+        @include flex($direction:column, $gap: 6rem, $align:start);
+
+
+        @include respond(small){
+        gap: 4rem;
+        }
+    }
+
+    &--quem{
+        position: relative;
+        width: 100%;
+
+
+        @include respond(small){
+            flex-flow:column;
+            align-items: center;
+            gap:3.12rem ;
+
+        }
+    }
+}
+
+
+.grid{
+&--passo{
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 6rem;
+    column-gap: 3rem;
+
+    @include respond(small){
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 3.12rem;
+        column-gap: 2rem;
+    }
+
+
+    @include respond(tiny){
+        grid-template-columns:1fr;
+    }
+}
+
+&--aprender{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4.5rem;
+
+    @include respond(small){
+    gap:2rem ;
+    }
+
+    @include respond(tiny){
+        grid-template-columns: 1fr;
+        gap:2rem ;
+        align-self: center;
+        }
+
+    & a{
+        overflow: hidden;
+        border-radius: 2rem;
+    }
+}
+}
+
+.div-lira{
+    position: absolute;
+    display: flex;
+    width:70%;
+    right: 0;
+    bottom: 0;
+    transform: translateX(10%);
+
+    @include respond(small){
+        position: relative;
+        transform:none;
+        width: 100%;
+        max-width: 53rem;
+    }
+}
+
+img{
+    max-width: 100%;
+}
+
+
+
+
+// Disclaimer
+
+.disclaimer__paragrafo{
+font-size: 1.33rem;  
+}
+
+// passo a passo
+
+.img-lira2{
+    grid-column: 2;
+    grid-row: 1/span 2;
+    align-self: center;
+
+    @include respond(small){
+        grid-row:auto;
+        grid-column: 1 / span 2;
+        max-width: 27.5rem;
+        justify-self: center;
+}
+
+@include respond(tiny){
+    grid-column: auto;
+}
+}
+
+.cabecalho-titulo{
+    @include flex($gap:1.6rem, $align: center);
+}
+
+.aprender-img{
+    border-radius: 2rem;
+    transition: transform ease 200ms;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+
+    @include respond(tiny){
+        max-width: 48rem;
+        width: 100%;
+        }
+}
+
+// quem
+
+.quem{
+    @include flex($gap:3.2rem, $direction:column);
+    color: #fff;
+    max-width: 50%;
+    width: 100%;
+    margin-bottom: 6.1rem;
+
+    
+@include respond(small){
+    margin-bottom: 0;
+max-width:53rem ;
+}
+
+    &__cabecalho{
+        border-left: solid 4px $cor-amarelo;
+        padding-left: 2rem;
+    }
+
+    &__textos{
+        @include flex($gap:1.6rem, $direction:column);
+
+        & span{
+            color: $cor-amarelo;
+            font-weight: 600;
+        }
+    }
+}
+
+
+.img-lira-logo{
+position: absolute;
+width: 45%;
+bottom: -0.5rem;
+right: 0;
+
+@include respond(small){
+    position: relative;
+    width: 35rem;
+}
+}
+
+.img-seta{
+    @include respond(small){
+        width: 3.5rem;    
+    }
+
+    @include respond(tiny){
+        width: 3rem;    
+    }
+}

@@ -1,0 +1,53 @@
+.rodape{
+    padding: 4.88rem 2rem;
+
+    @include respond(tiny){
+        padding: 2.5rem 2rem;
+    }
+
+        &__logo{
+            width: 3.7rem;
+            height: 3.7rem;
+
+            @include respond(tiny){
+                width: 5rem;
+            height: 5rem;
+            }
+        }
+
+        &__textos{
+            @include flex($gap:1rem );
+
+            @include respond(tiny){
+                flex-flow: column;
+                align-items: center;
+
+                & p{
+                    display: none;
+                }
+            }
+        }
+
+        
+        
+    
+    }
+    
+    .container--rodape{
+        justify-content: end;
+        gap: 1rem;
+        align-items: center;
+
+        @include respond(small){
+            justify-content: center;
+        }
+
+        @include respond(tiny){
+            flex-flow: column;
+        }
+        
+        & a{
+            text-decoration: none;
+            color: inherit;
+        }
+    }
